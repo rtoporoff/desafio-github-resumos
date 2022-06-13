@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .items{
+            margin: 5px;
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+        }
+        .shrink1{
+            flex-shrink: 1;
+        }
+
+        .shrink0{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .shrink2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .shrink3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+    </style>
+    
+      
+</head>
+<body>
+    <p>flex-shrink 1</p>
+    <div class="flex-container">
+        <div class="items shrink1 fg-1">A</div>
+        <div class="items shrink1 fg-1">B</div>
+        <div class="items shrink1 fg-1">C</div>
+        <div class="items shrink1 fg-1">D</div>
+        <div class="items shrink1 fg-1">E</div>
+    </div>
+    
+
+    <div class="flex-container">
+        <div class="items shrink1 fg-1">A</div>
+        <div class="items shrink1 fg-1">The generated</div>
+        <div class="items shrink1 fg-1">C</div>
+        <div class="items shrink1 fg-1">D</div>
+    </div>
+
+    <p>flex-shrink 0 / basis: 100px </p>
+    <div class="flex-container">
+        <div class="items shrink0 fg-1">A</div>
+        <div class="items shrink0 fg-1">The generated</div>
+        <div class="items shrink0 fg-1">The generated</div>
+        <div class="items shrink0 fg-1">D</div>
+    </div>
+
+    <p>flex-shrink 0 / basis: 100px </p>
+    <div class="flex-container">
+        <div class="items shrink1 fg-1">A</div>
+        <div class="items shrink2 fg-1">the generated</div>
+        <div class="items shrink3 fg-1">C</div>
+        <div class="items shrink1 fg-1">D</div>
+        <div class="items shrink2 fg-1">E</div>
+    </div>
+</body>
+</html>
