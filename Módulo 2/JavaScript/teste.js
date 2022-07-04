@@ -1,18 +1,17 @@
-function returnEvenValues(array) {
-    let evenNums = [];
-    for (let i = 0; i < array.length; i++) {
-        if(array[i] % 2 === 0) {
-            evenNums.push(array[i]);
-        } 
-        else {
-            console.log(`${array[i]} não é par`);
-        }
+function validaArray(arr, tamanho) {
+    try {
+      if (!arr.length || arr.length !== tamanho) throw new RangeError("O tamanho do array é inválido");
+  
+      return arr;
+    } catch(e) {
+      if (e instanceof RangeError) {
+        return console.log(e.message);
+      } else {
+        return e;
+      }
     }
-    console.log('os números pares são: ', evenNums);
-}
+  } 
+  
+  validaArray();
 
-let array = [1, 2, 3, 4, 5, 6, 7, 8];
-
-returnEvenValues(array);
-
-// É NECESSÁRIO RODAR NA PASTA EM QUE ESTÁ O ARQUIVO
+  console.log(validaArray);
