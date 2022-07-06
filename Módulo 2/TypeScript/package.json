@@ -1,0 +1,17 @@
+{
+    "name": "dio-typescript",
+    "description": "",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel index.html",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "authors": "Renan Toporoff",
+    "dependencies": {
+        "parcel-bundler": "^1.12.5"
+    },
+    "devDependencies": {
+        "@types/jquery": "^3.5.14"
+    }
+}
