@@ -7,6 +7,7 @@ export class Course {
     duration: number;
     rating: number;
     releaseDate: string;
+    description: string;
 }
 
 //para funcionar, alterei o elemento string para false no arquivo tsconfig.json
