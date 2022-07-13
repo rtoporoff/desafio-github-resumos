@@ -1,0 +1,37 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+        <h1 class="card-title text-center">Formulário de Usuários</h1>
+        <form [formGroup]="userForm">
+            <div class="row my-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="digite o seu nome">
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="row my-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="sobrenome" id="sobrenome" placeholder="digite o seu sobrenome">
+                    <label for="sobrenome">Sobrenome</label>
+                </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="idade" id="idade" placeholder="digite a sua idade">
+                    <label for="idade">Idade</label>
+                </div>
+                <div class="row my-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="profissao" id="profissao" placeholder="digite a sua profissão">
+                    <label for="profissao">Profissão</label>
+                </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="form-group col-12 mt-4"></div>
+                <button type="button" class="btn btn-outline-success float-end" (click)="createUser()">Enviar</button>
+                <button type="button" class="btn btn-outline-dancer float-start">Cancelar</button>
+            </div>
+        </form>
+
+    </div>
+</div>
