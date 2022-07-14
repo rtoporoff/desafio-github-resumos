@@ -1,0 +1,11 @@
+<h1 [class]="textRed"> o nome é {{ retornaNome() }}</h1>
+
+<img [src]= "imageUrl" [alt]="imageDesc" [style.width.px]="widthImg">
+
+<button [attr.aria-Label]="buttonText" [style.backgroundColor]="bgColor" [style.color]="fontColor"> {{buttonText}} </button>
+
+<input #input (keyup)="clicou(input.value)">
+{{ input.value }}
+
+<input type="text" class="form-control" [(ngModel)]="textInput">
+<p class="text-default">  {{text}}  </p>

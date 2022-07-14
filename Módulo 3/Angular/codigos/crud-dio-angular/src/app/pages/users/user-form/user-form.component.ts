@@ -23,7 +23,7 @@ export class UserFormComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.getUsers();
+    this.getUsers(); 
   }
   getUsers() {
     this.userService.getUsers().subscribe(response => {
